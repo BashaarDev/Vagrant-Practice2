@@ -2,5 +2,9 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntu/generic"
+  config.vm.box = "BD-Infra/Ubuntu-22-04-Desktop"
+
+  config.vm.provider "virtualbox" do |vb| 
+    vb.memory = 3072
+  end
 end
