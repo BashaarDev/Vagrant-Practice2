@@ -10,4 +10,6 @@ Vagrant.configure("2") do |config|
 	config.vm.hostname = "webclient"
 	
 	end
+  config.vm.provision "shell", path: "vagrant/install.nginx.sh"
+  config.vm.provision "shell", path: "vagrant/disable.banner.sh"
 end
